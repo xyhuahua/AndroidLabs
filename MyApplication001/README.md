@@ -42,7 +42,9 @@ app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 ### 5、设置外观
 在values>colors.xml定义了一些应用程序可以使用的颜色
 
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_5a8858d816120cabe1c1ad8ddf494b6e.png)
+
 添加新颜色screenBackground 值为 #2196F3，这是蓝色阴影色；添加新颜色buttonBackground 值为 #BBDEFB
 
 ```xml
