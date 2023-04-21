@@ -40,13 +40,21 @@ app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 <color name="buttonBackground">#BBDEFB</color>
 ```
 之后 fragment_first.xml的属性面板中设置屏幕背景色为
-![](https://huatu.98youxi.com/markdown/work/uploads/upload_7f950c1a34b6c88a15bb91a4f0be137e.png)
+```Kotlin
+ android:background="@color/screenBackground"
+```
 2、 设置每个按钮的背景色为**buttonBackground**
 ```xml
 android:background="@color/buttonBackground"
 ```
-![](https://huatu.98youxi.com/markdown/work/uploads/upload_c36526a424b476c48168070b0da94dcb.png)
+```Kotlin
+ android:background="@colorttonBackground"
+```
 还需要修改需修改res/values/themes.xml的style值，添加**.Bridge**。
+```Kotlin
+<style name="Theme.MyApplication001" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
+ 
+```
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_6ea2586f675aaed9767a6c6dbc1a95f5.png)
 3、移除TextView的背景颜色，设置TextView的文本颜色为color/white，并增大字体大小至72sp
 ```xml
@@ -223,16 +231,10 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ### 最后运行程序
 ①点击Toast按钮，会有消息弹出
-
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_6b26041457da931c93a5aac27aba7bed.png)
-
 ②不断点击COUNT按钮，数字会加一显示在屏幕上
-
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_ffbcfb70ea696305fe793fb955297161.png)
-
 ③点击RANDOM按钮，跳转到第二个页面，并且显示0-18中的一个随机数。
-
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_62842aa0a5aea4763a7e7361bf9bd10e.png)
-
 
 
