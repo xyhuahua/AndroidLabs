@@ -223,10 +223,16 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ### 最后运行程序
 ①点击Toast按钮，会有消息弹出
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_6b26041457da931c93a5aac27aba7bed.png)
+
 ②不断点击COUNT按钮，数字会加一显示在屏幕上
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_ffbcfb70ea696305fe793fb955297161.png)
+
 ③点击RANDOM按钮，跳转到第二个页面，并且显示0-18中的一个随机数。
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_62842aa0a5aea4763a7e7361bf9bd10e.png)
+
 
 
