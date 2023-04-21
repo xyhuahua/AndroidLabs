@@ -1,16 +1,22 @@
 # 构建第一个Kotlin应用
 ## 打开Android studio，创建新项目，选择Basic Activity
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_f2b559c16aad9af2f8c6fc28a7051827.png)
+
 ## 配置
 ### 点击右上角的手机图案，之后点击Create Physical
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_2053893ea60da0ff303784652e4ed773.png)
 ### 选择一部手机后点击下一步，等待安装
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_be5b11eee551a28811c788e41089ced3.png)
 ### 运行查看效果
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_582281b70c0b7ae72c197f77eb18a4a9.png)
 ## 第一个项目
 ### 1、添加一个按钮
 ①找到fragment_first.xml文件，点击右上角的Split，再点击左边的Palette 
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_ab9480f8088845cb6413575c7f1661a9.png)
 ②用鼠标把Button拖入到应用界面中。
 ### 2、设置按钮的约束
@@ -20,8 +26,10 @@ app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 ```
 ②随后添加Button的左侧约束至屏幕的左侧，Button的底部约束至屏幕的底部。查看Attributes面板，修改将id从button修改为toast_button（注意修改id将重构代码）
 ③点击Extract string resource
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_49e1c66d49e6955b07edc4875f2c3cf2.png)
 ④弹出对话框，令资源名为toast_button_text，资源值为Toast，并点击OK
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_2a74c9bfd495f7439a74a72e547fe452.png)
 
 ### 3、调整Next 按钮
@@ -29,9 +37,11 @@ app:layout_constraintTop_toBottomOf="@+id/textview_first" />
 ②更新Next的名字，为random_button
 ### 4再添加一个按钮
 向fragment_first.xml文件中添加第三个按钮，位于Toast和Random按钮之间，TextView的下方。新Button的左右约束分别约束至Toast和Random，Top约束至TextView的底部，Buttom约束至屏幕的底部
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_1b16b1c9ea4e8805691753a4b9fd6d8b.png)
 ### 5、设置外观
 在values>colors.xml定义了一些应用程序可以使用的颜色
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_5a8858d816120cabe1c1ad8ddf494b6e.png)
 添加新颜色screenBackground 值为 #2196F3，这是蓝色阴影色；添加新颜色buttonBackground 值为 #BBDEFB
 
@@ -55,6 +65,7 @@ android:background="@color/buttonBackground"
 <style name="Theme.MyApplication001" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge">
  
 ```
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_6ea2586f675aaed9767a6c6dbc1a95f5.png)
 3、移除TextView的背景颜色，设置TextView的文本颜色为color/white，并增大字体大小至72sp
 ```xml
@@ -63,13 +74,17 @@ android:background="@color/buttonBackground"
 ```
 ### 设置布局
 Toast与屏幕的左边距设置为24dp，Random与屏幕的右边距设置为24dp，利用属性面板的Constraint Widget完成设置。
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_02eaee9143914b3616e69568f44e6362.png)
 设置TextView的垂直偏移为0.3
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_d1b0f8303f8fa9a8f7633a7968393eb3.png)
 ### 最后结果
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_56350d6f437ff6700f27ee0a003be19a.png)
 
 ###  添加代码完成应用程序交互
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_4fc3bb64df69c2c2f5a468d6e1e5ded5.png)
 
 在FirstFragment.kt文件的onViewCreated函数改为
@@ -147,10 +162,12 @@ app:layout_constraintVertical_bias="0.45" />
 ```xml
 <color name="screenBackground2">#26C6DA</color>
 ```
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_d948c4bb797c7ad170477bea948c8744.png)
 
 ### 导航
 打开nav_graph.xml文件（**res>navigation>nav_graph.xml**）
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_b3480fcbaf2a31d0453537f6147405c7.png)
 
 ## 启用SafeArgs
@@ -173,6 +190,7 @@ id 'androidx.navigation.safeargs'
 同理，查看SecondFragment的属性栏
 点击Arguments **+**符号
 弹出的对话框中，添加参数myArg，类型为整型Integer
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_4b84bf26def283d3eafcc0695019424d.png)
 
 #### FirstFragment添加代码，向SecondFragment发数据
@@ -231,10 +249,13 @@ override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
 ### 最后运行程序
 ①点击Toast按钮，会有消息弹出
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_6b26041457da931c93a5aac27aba7bed.png)
 ②不断点击COUNT按钮，数字会加一显示在屏幕上
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_ffbcfb70ea696305fe793fb955297161.png)
 ③点击RANDOM按钮，跳转到第二个页面，并且显示0-18中的一个随机数。
+
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_62842aa0a5aea4763a7e7361bf9bd10e.png)
 
 
