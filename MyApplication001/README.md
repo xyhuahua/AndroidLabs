@@ -69,6 +69,7 @@ android:background="@color/buttonBackground"
 ```
 
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_6ea2586f675aaed9767a6c6dbc1a95f5.png)
+
 3、移除TextView的背景颜色，设置TextView的文本颜色为color/white，并增大字体大小至72sp
 ```xml
         android:textColor="@android:color/white"
@@ -78,9 +79,11 @@ android:background="@color/buttonBackground"
 Toast与屏幕的左边距设置为24dp，Random与屏幕的右边距设置为24dp，利用属性面板的Constraint Widget完成设置。
 
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_02eaee9143914b3616e69568f44e6362.png)
+
 设置TextView的垂直偏移为0.3
 
-![](https://huatu.98youxi.com/markdown/work/uploads/upload_d1b0f8303f8fa9a8f7633a7968393eb3.png)
+![](https://huatu.98youxi.com/markdown/work/uploads/upload_6c5d7f64adced842be890d378c21f113.png)
+
 ### 最后结果
 
 ![](https://huatu.98youxi.com/markdown/work/uploads/upload_56350d6f437ff6700f27ee0a003be19a.png)
